@@ -1,0 +1,30 @@
+<app-menu></app-menu>
+<div class="p-3">
+  <div class="row justify-content-md-center">
+    <div class="col-md-12">
+      <div class="card">
+        <h5 class="card-header">Menú</h5>
+
+        <div class="card-body">
+          <div class="row text-center justify-content-md-center">
+            <a
+              *ngFor="let item of lista_aplicaciones"
+              class="col-md-2 no-color card-link"
+              style="cursor: pointer"
+              (click)="redireccionar(item.url_aplicacion, item.url_login_app)"
+            >
+              <div class="box-circle">
+                <i
+                  class="icon {{item.url_imagen_aplicacion}}
+                fa-4xz
+                "
+                ></i>
+              </div>
+              <span>{{item.d_aplicacion}}</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,150 @@
+@import "~bootstrap/dist/css/bootstrap.css"
+@import "./assets/variables.styl"
+@import "./assets/functions.styl"
+
+*
+  transition .1s
+
+label
+  font-weight bold
+
+.bg-mdc
+  color WHITE_COLOR
+  background-color MDC_MAIN_COLOR
+
+body
+  color BLACK_COLOR
+  background-color BACKGROUND_MAIN_COLOR
+
+.body-login
+  background url('assets/img/background.jpg')
+  width 100%
+  height 100%
+  background-size 100%
+
+.no-color
+  color BLACK_COLOR
+
+.no-display
+  display none
+
+.btn-mdc
+  color WHITE_COLOR
+  background-color MDC_MAIN_COLOR
+  &:hover
+    color WHITE_COLOR
+    background-color MDC_ATENUE_COLOR
+
+.circle
+  borderRadius(100%)
+
+.cursor
+  cursor pointer
+
+.color-mdc
+  color MDC_ATENUE_COLOR
+
+.badge-success-light
+  color WHITE_COLOR
+  background-color GREEN_LIGHT_COLOR
+
+.tr-checked
+  background-color MDC_LIGHT_ATENUE_COLOR !important
+  &:hover
+    background-color MDC_LIGHT_ATENUE_COLOR !important
+
+.loading-max
+  width 50px
+  height 50px
+
+.icon-title
+  width 20px
+  height 20px
+
+.select2
+  width 100% !important
+
+.select2-selection--single
+  height 35px !important
+
+.desc
+  padding-left 20px !important
+  &:before
+    content ''
+    display block
+    background url(DOWN_IMG) 0 0/22px no-repeat
+    width 22px
+    height 22px
+    float left
+    margin-left -22px
+
+.asc
+  padding-left 20px !important
+  &:before
+    content ''
+    display block
+    background url(UP_IMG) 0 0/22px no-repeat
+    width 22px
+    height 22px
+    float left
+    margin-left -22px
+
+.required-input
+  &:after
+    content ' (*)'
+    color RED_COLOR_DARK
+
+.custom-file-label
+  &:after
+    content: 'Adjuntar' !important
+
+.no-bold
+  font-weight normal
+
+.no-border
+  border none
+  border-radius 0
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6
+  color MDC_ATENUE_COLOR
+
+.card-header
+  background-color #FFF
+  border-bottom 1px solid MDC_ATENUE_COLOR
+
+.table-hover tbody tr
+  &:hover
+    background-color MDC_LIGHT_COLOR
+    border-left 2px solid MDC_ATENUE_COLOR
+
+.table-striped tbody tr
+  &:nth-of-type(odd)
+    background-color MDC_LIGHT_COLOR
+
+.invalid-feedback
+  display block
+
+.viewport
+  display none
+  @media screen and (max-width: 990px)
+    display inline-block
+
+.viewport-inverse
+  display inline-block
+  @media screen and (max-width: 768px)
+    display none
+
+.modal-dialog
+  @media screen and (max-width: 768px)
+    margin 0px
+    height 100%
+
+.modal-body
+  @media screen and (max-width: 768px)
+    height 92%
+    margin-bottom 20px

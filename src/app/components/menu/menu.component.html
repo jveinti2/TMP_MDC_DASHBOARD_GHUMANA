@@ -1,0 +1,69 @@
+<nav class="navbar navbar-expand-lg navbar-light bg-mdc">
+  <a class="navbar-brand" routerLink="/">
+    <img [src]="logo_mdc" class="img-logo" />
+  </a>
+  <button
+    class="navbar-toggler"
+    type="button"
+    data-toggle="collapse"
+    data-target="#navbarSupportedContent"
+    aria-controls="navbarSupportedContent"
+    aria-expanded="false"
+    aria-label="Toggle navigation"
+  >
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-no-link">
+        <span class="nav-link">
+          <b> DASHBOARD GESTIÓN HUMANA </b>
+        </span>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" routerLink="/">
+          <i class="fa fa-home"></i>
+          Inicio
+        </a>
+      </li>
+    </ul>
+  </div>
+  <div class="my-2 my-lg-0">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item dropdown" ngbDropdown *ngIf="is_auth">
+        <a
+          class="nav-link dropdown-toggle"
+          id="navbarDropdown"
+          role="button"
+          ngbDropdownToggle
+          style="cursor: pointer"
+        >
+          <img [src]="img_user" width="25" height="25" class="circle" />
+          {{ auth_data.nombre_usuario }}
+        </a>
+        <div
+          ngbDropdownMenu
+          aria-labelledby="navbarDropdown"
+          class="dropdown-menu dropdown-menu-lg-right p-1"
+          style="right: 0px"
+        >
+          <div class="user-content">
+            <div class="user-header text-center">
+              <img [src]="img_user" width="80" height="80" class="circle" />
+              <span class="user-name mt-2">{{ auth_data.nombre_usuario }}</span>
+              <small class="mt-2">v. {{ version }}</small>
+            </div>
+            <div class="user-footer p-1 text-center">
+              <button class="btn btn-dark btn-block" (click)="cerrarSesion()">
+                Cerrar sesión <i class="fas fa-sign-out-alt"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+      </li>
+      <li class="nav-item" *ngIf="!is_auth">
+        <a class="nav-link" routerLink="/inicio-sesion"> Iniciar sesión </a>
+      </li>
+    </ul>
+  </div>
+</nav>

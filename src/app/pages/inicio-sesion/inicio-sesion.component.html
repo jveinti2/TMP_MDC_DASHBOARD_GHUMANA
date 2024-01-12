@@ -1,0 +1,61 @@
+<div class="container">
+  <div class="row justify-content-md-center">
+    <div class="col-md-4 mt-5">
+      <div class="card">
+        <div class="card-header">
+          <h5 class="m-0">Iniciar sesión</h5>
+        </div>
+        <div class="card-body">
+          <form
+            id="loginForm"
+            [formGroup]="loginForm"
+            (ngSubmit)="ingresoAplicacion()"
+          >
+            <div class="form-group">
+              <div class="input-group">
+                <div class="input-group-prepend">
+                  <span class="input-group-text" id="email">
+                    <i class="fas fa-user"></i>
+                  </span>
+                </div>
+                <input
+                  type="text"
+                  formControlName="email"
+                  class="form-control"
+                  id="email"
+                  name="email"
+                  placeholder="Usuario"
+                  required
+                />
+              </div>
+            </div>
+            <div class="form-group">
+              <div class="input-group">
+                <div class="input-group-prepend">
+                  <span class="input-group-text" id="password">
+                    <i class="fas fa-lock"></i>
+                  </span>
+                </div>
+                <input
+                  type="password"
+                  formControlName="password"
+                  class="form-control"
+                  id="password"
+                  name="password"
+                  placeholder="Contraseña"
+                  required
+                />
+              </div>
+            </div>
+            <button class="btn btn-lg btn-mdc btn-sm btn-block" type="submit">
+              Ingresar
+            </button>
+            <div class="text-center">
+              <img [src]="logo_mdc" style="width: 200px" />
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

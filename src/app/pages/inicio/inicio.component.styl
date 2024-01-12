@@ -1,0 +1,19 @@
+@import "../../../assets/variables.styl"
+@import "../../../assets/functions.styl"
+
+.box-circle
+  borderRadius(50px)
+  padding 20px 15px
+  border 3px solid BORDER_GRAY_COLOR
+
+.icon
+  font-size 50px
+
+.card-link
+  margin 0
+  &:hover
+    color MDC_MAIN_COLOR !important
+    .box-circle
+      border 3px solid MDC_MAIN_COLOR
+    i
+      color MDC_MAIN_COLOR
